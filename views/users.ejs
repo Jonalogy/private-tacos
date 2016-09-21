@@ -1,0 +1,13 @@
+<% users.forEach(function(user) { %>
+<div class="well">
+  <h2><%= user.name %></h2>
+  <h4>Their Tacos</h4>
+  <ul>
+  <% user.tacos.forEach(function(taco) { %>
+  <li><%= taco.name %></li>
+  <% }); %>
+</ul>
+</div>
+<% }); %>
+
+<a href="/">&larr; Home</a>

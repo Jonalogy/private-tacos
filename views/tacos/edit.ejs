@@ -1,0 +1,16 @@
+<h1>Edit</h1>
+
+<form action="/tacos/<%= taco.id %>" class="edit-form" role="form">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name of Taco" name="name" value="<%= taco.name %>">
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="number" class="form-control" id="amount" placeholder="Number of Tacos" name="amount" value="<%= taco.amount %>">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a href="/tacos">&larr; Back</a>

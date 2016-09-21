@@ -1,0 +1,17 @@
+<a href="/tacos/new" class="btn btn-success pull-right">New Taco</a>
+
+<h1><%= title %></h1>
+
+<% tacos.forEach(function(taco) { %>
+<div class="well">
+  <h2><a href="/tacos/<%= taco.id %>"><%= taco.name %></a>
+    <small><%= taco.amount %></small>
+  </h2>
+  <% if (taco.userId === currentUser.id) { %>
+    <a href="/tacos/<%= taco.id %>/edit" class="btn btn-info glyphicon glyphicon-edit"></a>
+    <a href="/tacos/<%= taco.id %>" class="btn btn-danger glyphicon glyphicon-trash delete-btn"></a>
+  <% } %>
+</div>
+<% }); %>
+
+<a href="/">&larr; Home</a>
