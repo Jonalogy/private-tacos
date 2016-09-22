@@ -1,6 +1,6 @@
 <h1>New Taco</h1>
 
-<form action="/tacos" method="POST" role="form">
+<form action="/tacos" method="POST" role="form" enctype="multipart/form-data">
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Name of Taco" name="name">
@@ -9,7 +9,7 @@
     <label for="amount">Amount</label>
     <input type="number" class="form-control" id="amount" placeholder="Number of Tacos" name="amount">
   </div>
-
+  <input type="file" name="picture">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
